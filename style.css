@@ -163,6 +163,8 @@ a.disabled{
 }
 
 span.newdate{
+	float: left;
+	width: 128px;
     border-radius: 10px;
     background-color: var(--main-color2);
     color: var(--main-color0);
