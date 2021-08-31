@@ -139,6 +139,9 @@ a.better{
     background-color: var(--main-color1);
     color: white;
     padding: 2pt 10pt;
+	line-height:1.5;
+	word-wrap: normal;
+	white-space: nowrap;
 }
 
 a.disabled{
@@ -214,7 +217,6 @@ table.news td.c1{
 }
 
 table.edutable{
-    
 }
 
 table.edutable td.c2{
@@ -226,6 +228,7 @@ table.edutable tr{
     margin-top: 40pt;
     padding: 10pt;
     margin-left: 10pt;
+	line-height: 1.4;
 }
 
 table.edutable td.c1{
@@ -310,7 +313,8 @@ div.home_intro p {
 	display: block;
 	vertical-align: top;
 	text-align:justify; 
-	
+	padding:10pt;
+	font-size: min(15pt,2vw);
 } 
 	
 div.mobile{display: none}
@@ -350,7 +354,7 @@ p.mydegree {
  display: block;
  font-weight: normal;
  margin: 0 0 0 20px;
- font-size: min(16pt,2vw);
+ font-size: min(17pt,2vw);
 }
 p.myinterest { 
 	display: block;
@@ -391,24 +395,23 @@ div.linkbox{
 }
 
 div.selectedpaperlist{
-	margin: auto;
 	width: 90%;
 	max-width: 1750 pt;
 	padding: 10px;
 	margin-bottom: 100pt;
-	overflow: hidden;
-}
-
-div.selectedpaperlist *{
-	width: 300pt;
-	padding-bottom: 10pt;
-	vertical-align: top;
+	display: table;
 }
 
 div.selectedpaper{
-	width: 28%;
+	width: 250pt;
+	padding-bottom: 10pt;
+	vertical-align: top;
 	display: inline-block;
-    margin: 20pt 30pt 30pt 20pt;
+	margin:20pt;
+}
+
+div.selectedpaper img{
+	width: 100%;
 }
 
 .header{
