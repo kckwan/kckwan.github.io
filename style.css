@@ -162,9 +162,17 @@ a.disabled{
 	clear: both;
 }
 
-span.newdate{
+span.newdate2{
 	float: left;
 	width: 128px;
+    border-radius: 10px;
+    background-color: var(--main-color2);
+    color: var(--main-color0);
+    padding:0pt 5pt;
+}
+
+
+span.newdate{
     border-radius: 10px;
     background-color: var(--main-color2);
     color: var(--main-color0);
