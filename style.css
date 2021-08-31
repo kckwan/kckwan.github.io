@@ -6,6 +6,8 @@
     --main-colorA: #11539FF0;
     --main-colorhighlight: #80E0EF;  
     --main-coloractive: #95C8DA;  
+	
+	box-sizing: border-box;
 }
 
 .home_main {
@@ -19,8 +21,6 @@ footer, header, hgroup, menu, nav, section {
     display: block;
 }
 
-* { box-sizing: border-box; }
-
 body, html, .tabs {
     margin: 0;
 }
@@ -30,7 +30,6 @@ footer {
 	background-color: var(--main-color1); 
 	text-align: center;
 	color: var(--main-color0);
-	font-size: min(22pt,3vw);
 }
 
 h1 {
@@ -39,7 +38,6 @@ h1 {
    color:var(--main-color1); 
    border-bottom: 3px solid var(--main-color1); 
    line-height: 0;
-   font-size: 40pt;
    padding: 0 0 0 0pt;    
    margin-top: 100pt;
    margin-left: auto;
@@ -53,7 +51,9 @@ h1 span {
 
 div.flex-container {
     display: flex;
+	max-width: 1500px;
 	margin-bottom:20pt;
+	justify-content: flex-end;
 }
 
 .flex-childTextA {
@@ -69,13 +69,14 @@ div.flex-container {
 }  
 
 .flex-childTextB {
-	flex:0 0;
+	flex:0 1;
+	right: 0;
 	font-size:min(20pt,2vw);
     background-color: var(--main-color1);
 	color: var(--main-color0);
 	margin-left: 15px;
-	margin-bottom: 10px;
-	margin-top: 5px;
+	margin-bottom: 5px;
+	margin-top: 0px;
 	padding: 20px;
 	padding-top: 10px;
 }  
@@ -109,7 +110,7 @@ div.paperabs{
 }
 
 snap.paperabsicon{
-    font-size:min(10pt,1vw);
+    font-size:min(12pt,2vw);
     border-radius: 10px;
     background-color: var(--main-color2);
     color: var(--main-color0);
@@ -153,7 +154,7 @@ a.disabled{
 
 .section{
     font-family: Arial;
-    font-size: min(20pt,3vw);
+    font-size: min(15pt,3vw);
     width:80%;
     margin-left:auto;
     margin-right:auto;
@@ -164,13 +165,21 @@ a.disabled{
 
 span.newdate2{
 	float: left;
-	width: 128px;
+	width: 100px;
     border-radius: 10px;
     background-color: var(--main-color2);
     color: var(--main-color0);
     padding:0pt 5pt;
 }
 
+span.newdate3{
+	float: left;
+	min-width: 150px;
+    border-radius: 10px;
+    background-color: var(--main-color2);
+    color: var(--main-color0);
+    padding:0pt 5pt;
+}
 
 span.newdate{
     border-radius: 10px;
@@ -185,7 +194,7 @@ table.teachingtable{
 
 table.teachingtable td.c1{
 	padding-right:30pt;
-    vertical-align: top;
+	vertical-align:middle;
 }
 
 table.teachingtable td.c2{
@@ -241,7 +250,7 @@ table.papertable td.c2{
 
 table.myinfotable td.c1{
 	font-family: Arial;
-    font-size: min(20pt,3vw);
+    font-size: min(15pt,2vw);
 	font-weight: bold;
 	padding-top: 4pt;
 	padding-bottom: 10pt;
@@ -301,8 +310,7 @@ div.home_intro p {
 	display: block;
 	vertical-align: top;
 	text-align:justify; 
-	font-size: 0.7em;
-	font-size: min(20pt,2vw);
+	
 } 
 	
 div.mobile{display: none}
@@ -334,12 +342,22 @@ div.right img {
 p.myname { 
     display: block;
     font-weight: bold; 
-    font-size: min(34pt,6vw);
+    font-size: min(25pt,4vw);
     margin-top: 10pt;
     margin-bottom: 5pt;
 }
-p.mydegree { display: block;font-weight: normal; margin: 0 0 0 20px;font-size: min(18pt,3vw);}
-p.myinterest { display: block;font-style: italic; margin: 0 0 0 20px;font-size: min(18pt,3vw);}
+p.mydegree { 
+ display: block;
+ font-weight: normal;
+ margin: 0 0 0 20px;
+ font-size: min(16pt,2vw);
+}
+p.myinterest { 
+	display: block;
+	font-style: italic; 
+	margin: 0 0 0 20px;
+	font-size: min(15pt,2vw);
+}
 
 div.filledbox{
 	width:30px;
@@ -417,7 +435,7 @@ ul.menubar li a:hover { background-color:var(--main-colorhighlight); }
 ul.menubar li p{ 
     color: white;
     font-weight: bold;
-    font-size : min(20pt,3vw);
+    font-size : min(15pt,3vw);
     text-align: left;
     margin-top: 10pt;
     margin-bottom: 10pt;
@@ -427,14 +445,14 @@ ul.menubar li p{
 ul.menubar li a { 
     text-decoration: none;
     font-weight: bold;
-    font-size : min(20pt,3.5vw);
+    font-size : min(15pt,3vw);
     display: block;
     color: white;
     text-align: center;
     height: 100%;
     margin-top: 0pt;
     margin-bottom: 0pt;
-    padding: 5px 16px 5px;
+    padding: 8px 16px 8px;
 }
 
 @media screen and (max-width: 700px) {
@@ -454,8 +472,8 @@ ul.menubar li a {
     div.left{float:none;margin:auto;max-width:100%}
     div.right{float:none;margin:auto;width:70%;max-width:100%;margin-top:40pt;}
 
-    p.myname { text-align: center;font-size: 6vw;}
-    p.mydegree { text-align: center;font-size: 4vw;}
+    p.myname { text-align: center;font-size: 5vw;}
+    p.mydegree { text-align: center;font-size: 3vw;}
 
     .right img{ 
         float:none;
