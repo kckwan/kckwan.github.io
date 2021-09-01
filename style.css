@@ -148,10 +148,10 @@ a.disabled{
 	pointer-events: none;
     text-decoration: none;                              
     border-radius: 20px;
-    font-weight: bold;
     background-color: var(--main-color2);
     color: white;
     padding: 2pt 10pt;
+	white-space: nowrap;
 }
 
 
@@ -253,11 +253,11 @@ table.papertable td.c2{
 
 table.myinfotable td.c1{
 	font-family: Arial;
-    font-size: min(15pt,2vw);
+    font-size: min(15pt,3vw);
 	font-weight: bold;
 	padding-top: 4pt;
 	padding-bottom: 10pt;
-	width:140pt;
+	white-space: nowrap;
 
 }
 table.myinfotable{
@@ -364,23 +364,22 @@ p.myinterest {
 }
 
 div.filledbox{
-	width:30px;
-	height:30px;
+	width:min(30pt,3vw);
+	height:min(30pt,3vw);
 	background-color: var(--main-color1);
-	margin-left:5px;
-	margin-right:5px;
 	border-radius:5px;
 	vertical-align: middle;
+	margin-left:1vw;
+	margin-right:1vw;
 	float:left;
 }
 
 div.emptybox{
-	width:20px;
-	height:20px;
+	width:min(20pt,2vw);
+	height:min(20pt,2vw);
 	border:1px solid #000000;
 	margin-top:5px;
-	margin-left:10px;
-	margin-right:10px;
+	margin-left:min(15pt,1.5vw);
 	vertical-align: text-top;
 	float:left;
 }
@@ -471,6 +470,12 @@ ul.menubar li a {
     div.home_intro p { display: none; }
     div.mobile{display:initial;}
     div.pc{display:none;}
+
+	.intro_box{
+		margin-top: 50pt;
+		margin-bottom: 110pt;
+		padding: 30px;
+	}
 
     div.left{float:none;margin:auto;max-width:100%}
     div.right{float:none;margin:auto;width:70%;max-width:100%;margin-top:40pt;}
