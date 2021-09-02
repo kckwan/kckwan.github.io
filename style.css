@@ -364,22 +364,20 @@ p.myinterest {
 }
 
 div.filledbox{
-	width:min(30pt,3vw);
-	height:min(30pt,3vw);
+	width:min(20pt,3vw);
+	height:min(20pt,3vw);
 	background-color: var(--main-color1);
-	border-radius:5px;
+	border-radius:min(5pt,1vw);
 	vertical-align: middle;
-	margin-left:1vw;
-	margin-right:1vw;
 	float:left;
 }
 
 div.emptybox{
-	width:min(20pt,2vw);
-	height:min(20pt,2vw);
+	width:min(10pt,2vw);
+	height:min(10pt,2vw);
 	border:1px solid #000000;
 	margin-top:5px;
-	margin-left:min(15pt,1.5vw);
+	margin-left:min(5pt,0.5vw);
 	vertical-align: text-top;
 	float:left;
 }
@@ -395,7 +393,6 @@ div.linkbox{
 
 div.selectedpaperlist{
 	width: 90%;
-	max-width: 1750 pt;
 	padding: 10px;
 	margin-bottom: 100pt;
 	display: table;
