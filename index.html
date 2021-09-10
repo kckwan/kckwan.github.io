@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!---Hello! 你好! こにちは！Guten Tag!--->
 <html>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">   
     <head>
@@ -7,27 +8,10 @@
 		<link rel="shortcut icon" type="image/x-icon" href="#">
     </head>
     
-    <script>
-        var isMain;
-        
-        function load_Paper_Page(x) {
-            if (x.localeCompare('home.html') == 0) {  //They are equal, going back to main
-                isMain = true;
-                window.document.getElementById("back_button").style.display = "none";
-            }else{
-                isMain = false;
-                window.document.getElementById("back_button").style.display = "none";
-                
-            }
-            window.document.getElementById("content").innerHTML='<object type="text/html" data="' + x + '" ></object>';
-        }
-    </script> 
-
-    
-    
     <body>
         <div class="home_main" id="kc">
 			<div class="intro_box">
+<<<<<<< HEAD
 					<!---Hello! 你好! こにちは！Guten Tag!--->
 					<div class="left">
 						<div class="home_name">
@@ -46,12 +30,29 @@
 					</div>
 					<div class="right">
 						<img src="img/photo/KC.jpg"/>
+=======
+				<div class="left">
+					<div class="home_name">
+						<p class = "myname"> KWAN, Kin Chung (KC) <br> 關健聰 かんけんそう </p>
+						<p class = "mydegree"> B.Sc., Ph.D (Computer Science, CUHK) </p>
+>>>>>>> f61486aea5d4063f36039bd70585235ea588a7e1
 					</div>
-					<div class="mobile">
-						<p style="text-align: center;font-size:4vw;margin-bottom: 0pt">
-							<a class="better" href="https://www.uni-konstanz.de/en/" target="_blank">University of Konstanz</a>
+					<div class="home_intro">
+						<p> 
+							> I am a researcher from Hong Kong with B.Sc. and Ph.D. degree in Computer Science from the Chinese University of Hong Kong in 2009 and 2015. My research experience is in the field of computer graphics (CG) and human-computer interaction (HCI). Multiple technical research papers are published in top conferences and journals such as SIGGRAPH (Asia), TVCG, CGF, and SIGCHI. 
+							<br><br>
+							> Now, I am working in <a class="better" href="https://www.uni-konstanz.de/en/" target="_blank">Univeristy of Konstanz</a>, Germany and <a class="better" href="https://www.sfbtrr161.de/" target="_blank">SFB-TRR 161</a>.
+							<br><br>
+							> My research interests include non-photorealistic rendering, VR/AR.
 						</p>
 					</div>
+				</div>
+				<div class="right"> <img src="img/photo/KC.jpg"/> </div>
+				<div class="mobile">
+					<p style="text-align: center;font-size:4vw;margin-bottom: 0pt">
+						<a class="better" href="https://www.uni-konstanz.de/en/" target="_blank">University of Konstanz</a>
+					</p>
+				</div>
 			</div>
 		</div>
 
@@ -62,22 +63,16 @@
                 <li><a href="#profile_anchor">Profile</a></li>
                 <li><a href="#paper_anchor">Papers</a></li>
                 <li><a href="#activity_anchor">Activity</a></li>
-				<li><a href="#hobby_anchor">Hobby</a></li>
-				<li><a href="#resource_anchor">Resources</a></li>
+				<!--<li><a href="#hobby_anchor">Hobby</a></li>-->
+				<!--<li><a href="#resource_anchor">Resources</a></li>-->
                 <!--<li><a href="#link_anchor">Links</a></li>-->
-                <!--<li><a href="#contact_anchor">Contact</a></li>-->
-                <!-- <li style="float: right">Last update: 20 Apr 2020</li> -->
-                <!-- <li style="float: right" id="back_button" ><a href="#" onclick="load_Paper_Page('home.html')">Back</a></li> -->
             </ul>
         </div>
-	
 		<div class="mobile">
 			<center>
 			<img style="width:50%;margin-top:50px;" src="img/photo/qrcode.png">
 			</center>
 		</div>
-
-
         <div class="content" style="width:100%">
 			<a class="anchor" id="news_anchor"></a>
             <h1 id="news"><span> What's New</span></h1>
@@ -117,9 +112,9 @@
             <div class="section">
 				<div class = "mobile">
 					<h2 class="first">Who am I?</h2>
-								<p style="text-align:justify;padding-right:10px"> 
-									I am a researcher from Hong Kong with B.Sc. and Ph.D. degree in Computer Science from the Chinese University of Hong Kong in 2009 and 2015. My research experience is in the field of computer graphics (CG) and human-computer interaction (HCI). Multiple technical research papers are published in top conferences and journals such as SIGGRAPH (Asia), TVCG, CGF, and SIGCHI. Now, I am working in <a class="better" href="https://www.uni-konstanz.de/en/" target="_blank">Univeristy of Konstanz, Germany</a> and <a class="better" href="https://www.sfbtrr161.de/" target="_blank">SFB-TRR 161</a>. My research interests include non-photorealistic rendering, VR/AR.
-								</p>
+					<p style="text-align:justify;padding-right:10px"> 
+						I am a researcher from Hong Kong with B.Sc. and Ph.D. degree in Computer Science from the Chinese University of Hong Kong in 2009 and 2015. My research experience is in the field of computer graphics (CG) and human-computer interaction (HCI). Multiple technical research papers are published in top conferences and journals such as SIGGRAPH (Asia), TVCG, CGF, and SIGCHI. Now, I am working in <a class="better" href="https://www.uni-konstanz.de/en/" target="_blank">Univeristy of Konstanz, Germany</a> and <a class="better" href="https://www.sfbtrr161.de/" target="_blank">SFB-TRR 161</a>. My research interests include non-photorealistic rendering, VR/AR.
+					</p>
 				</div>
 				<div style="height:50pt"></div>
                 <h2 class="first">Academic Experiences</h2>
@@ -127,9 +122,9 @@
                     <tr>
                         <td class="c1"><span class="newdate">2020 - now</span></td>
                         <td class="c2"> 
-						<div class="pc"><i><b>Postdoctoral Research Assistant</b></i> in University of Konstanz, Germany <a class="better" href="https://www.uni-konstanz.de/en" target="_blank">Universität Konstanz</a> <br>
+						<div class="pc"><i><b>Postdoctoral Research Fellow</b></i> in University of Konstanz, Germany <a class="better" href="https://www.uni-konstanz.de/en" target="_blank">Universität Konstanz</a> <br>
                         Supervisor: <a class="better" href="https://www.cgmi.uni-konstanz.de/en/persons/prof-dr-oliver-deussen/" target="_blank">Prof. Oliver Deussen </a></div>
-						<div class="mobile"><i><b>Postdoctoral Research Assistant</b></i> <br> <a class="better" href="https://www.uni-konstanz.de/en" target="_blank">University of Konstanz</a></div>
+						<div class="mobile"><i><b>Postdoctoral Research Fellow</b></i> <br> <a class="better" href="https://www.uni-konstanz.de/en" target="_blank">University of Konstanz</a></div>
                         </td>
                     </tr>                    
                     <tr>
@@ -142,8 +137,8 @@
                     <tr>
                         <td class="c1"><span class="newdate">2017 - 2018</span></td>
                         <td class="c2"> 
-							<div class ="pc"><i><b>Postdoctoral Research Assistant</b></i> in City University of Hong Kong, Hong Kong <a class="better" href="https://www.cityu.edu.hk/" target="_blank">CityU</a> <br> Supervisor: <a class="better" href="http://sweb.cityu.edu.hk/hongbofu/" target="_blank">Prof. Hongbo Fu</a></div>
-							<div class="mobile"><i><b>Postdoctoral Research Assistant</b></i> <br> <a class="better" href="https://www.cityu.edu.hk/" target="_blank">City University of Hong Kong</a></div>
+							<div class ="pc"><i><b>Postdoctoral Research Fellow</b></i> in City University of Hong Kong, Hong Kong <a class="better" href="https://www.cityu.edu.hk/" target="_blank">CityU</a> <br> Supervisor: <a class="better" href="http://sweb.cityu.edu.hk/hongbofu/" target="_blank">Prof. Hongbo Fu</a></div>
+							<div class="mobile"><i><b>Postdoctoral Research Fellow</b></i> <br> <a class="better" href="https://www.cityu.edu.hk/" target="_blank">City University of Hong Kong</a></div>
                         </td>
                     </tr>                    
                     <tr>
@@ -254,7 +249,7 @@
 							<td>Japanese 日本語</td>
 							<td><div class="filledbox"></div></td>
 							<td><div class="filledbox"></div></td>
-							<td><div class="filledbox"></div></td>
+							<td><div class="emptybox"></div> </td>
 							<td><div class="emptybox"></div> </td>
 							<td><div class="emptybox"></div> </td>
 							<td>Intermediate </td>
@@ -650,21 +645,21 @@
 				</div>
 			</div>
 			
-			<a class="anchor" id="hobby_anchor"></a>
+			<!--<a class="anchor" id="hobby_anchor"></a>
             <h1 id="hobby"><span> Hobby </span></h1>
             <div class="section">
-                <!--<h2>Travelling to Japan</h2>
+                <h2>Travelling to Japan</h2>
                 I like to travel to Japan with my family. Here are some photos captured in Japan using my iPhone camera.<BR>
                 <div class="gallay">
                 <img src="img/photo/sakura.jpg"/>
                 <img src="img/photo/redleave.jpg"/>
-                </div>-->
+                </div>
             </div>
 			<a class="anchor" id="Resources_anchor"></a>
             <h1 id="resources"><span> Resources </span></h1>
 			<div class="section">
             </div>
-			<!--<a class="anchor" id="contact_anchor"></a>
+			<a class="anchor" id="contact_anchor"></a>
             <h1 id="contact"><span> Contact</span></h1>
 			<a class="anchor" id="link_anchor"></a>
 			<h1 id="links"><span> Useful Links</span></h1>
