@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">   
+		<title>Deep Learning on Digital Image</title>
+        <link rel="stylesheet" type="text/css" href="../css/style_tutorial.css">
+		<link rel="shortcut icon" type="image/x-icon" href="#">
+    </head>
+    
+    <body>
+		<div class = "header">
+			<nav class="crumbs">
+				<ol>
+					<li class="crumb"><a href="../index.html">KC Kwan Webpage</a></li>
+					<li class="crumb"><a href="tutorial.html">Learning Notes</a></li>
+					<li class="crumb">Deep Learning on Digital Image</li>
+				</ol>
+			</nav>
+			<span class="headerName">
+				KC's Learning Notes: Deep Learning on Digital Images (Constructing)
+			</span>
+			<span class="headerDate">
+				Copyright all reserved.<br>
+			</span>
+		</div>
+		
+		<div class="main">
+				
+			<a class="anchor" id="top"></a>
+			<h1>Table of Content</h1>
+			<nav>
+				<ol>
+					<li><a href="#introduction">Introduction</a></li>
+					<li><a href="#installation">Installation</a></li>
+					<li><a href="#firstprogram">First Program</a></li>
+					<li><a href="#Reference">Reference</a></li>
+				</ol>
+			</nav>
+			
+			<a class="anchor" id="introduction"></a>
+			<h1>Introduction </h1>
+				<p>I need to learn how to use deep learning for my computer graphics researches! Although deep learning has been very hot and popular for more than 5 years, I do not have chance to work on it and do something using deep learning. I know it is not good so now I need to start learning it now! At the first beginning, as I need to work based on someone's code, which is using <a href="#python">python</a> and <a href="#pytorch">torch</a>, I may need to study these two tools. They are very popular tools. But for me, I like <a href="#tensorFlow">TensorFlow</a> from google more. So in this learning note, I will focus on python and TensorFlow in my studying. </p>
+				
+				My current environment (Date: 17 Nov 2021) is as follow:
+				<ul>
+					<li>CPU: Intel(R) Core(TM) i7-6700K CPU @4.00GHz, 4 Cores, 8 Processors.</li>
+					<li>Ram: 48GB</li>
+					<li>GPU: <a href="nvidia">NVIDIA</a> GeForce RTX 2080</li>
+					<li>Operation System: <a href="microsoft">Microsoft</a> Windows 11</li>
+					<li>Editor: Notepad++</li>
+					
+					<li>Python 3.9.9 </li>
+					<li>TensorFlow 2.7.0</li>
+					<li>CUDA 11.5</li>
+					<li>cuDNN 8.3.0.98</li>
+					
+				</ul>
+				
+				<a href="#top"><BR><BR>To top</a>
+			
+			<a class="anchor" id="installation"></a>
+			<h1>Installation </h1>
+			<p>To install the python in windows, just need to download from the python webpage (<a href="https://www.python.org/downloads/release/python-399/" target="_blank">Python 3.9.9</a>) or in my archive (Download: <a href="../program/python-3.9.9-amd64.exe" target="_blank">Python Windows installer (64-bit)</a>). Run the <code>.exe</code> file to install python in the computer. It is also recommended to add python to <code>PATH</code> by enabling it on the installation page:</p>
+			<figure>
+			<img src="../img/tutorial/deepimage/install_python.png" />
+			<figCaption>Installing python. Add python to path.</figCaption>
+			</figure>
+			<p>Then we also need to install TensorFlow in windows. According to the offical webpage of TensorFlow, we need to install C++ redistributable for Windows 7 or later, if we have not done that before. Just need to download it from the Microsoft webpage (<a href="https://docs.microsoft.com/en-US/cpp/windows/latest-supported-vc-redist?view=msvc-170" target="_blank">Microsoft Visual C++ Redistributable Latest Supported Downloads</a>) or in my archive (Download: <a href="../program/VC_redist_x64.exe" target="_blank">C++ Redistributable installer (64-bit)</a>). Run the <code>.exe</code> file to install it in the computer. Remember that we need to restart the computer after installing the C++ redistributable.</p>
+			<p>After installing the C++ redustribution, the last thing is to install TensorFlow. Unlike the other tools above, the TensorFlow library require <code>pip</code> of python. To do so, let's start a commend prompt from Windows. One can do so by finding command prompt in the start menu, searching the keyword <code>cmd</code>.
+			</p>
+			
+			<figure>
+			<img src="../img/tutorial/deepimage/run_cmd.png" />
+			<figCaption>In Windows start menu, type <code>cmd</code> and search for Command Prompt.</figCaption>
+			</figure>
+			
+			<figure>
+			<img src="../img/tutorial/deepimage/commandprompt.png" />
+			<figCaption>It is Command Prompt.</figCaption>
+			</figure>
+			
+			In the command prompt, let's check whether the python is installed correctly. We type <code>python -V</code> and <code>pip -V</code>, and we should get the output <code>Python 3.9.9</code> and <code>pip 21.2.4 from \(the path)\pip (python 3.9)</code> if python is installed. Next, let's install the tensorflow using <code>pip</code>. We can type <code>pip install tensorflow</code>, and we will the program is downloading the tools, including its required package. Once it is finished, we can verify the installation by <code>python -c "import tensorflow as tf;print(tf.reduce_sum(tf.random.normal([1000, 1000])))"</code>. This is from the <a href="https://www.tensorflow.org/install">installation guide</a> of TensorFlow. A tensor <code>tf.Tensor(xxxx.xxxx, shape=(), dtpye=float32)</code> is returned. Then, TensorFlow has been installed. However, some people may see an error: <code>dlerror: cusolver64_11.dll not found</code>. It is because the GPU driver tools are not setuped. In Tensorflow, CUDA is needed for NVIDIA GPU-support. So I need download the GPU drivers (450.80.02 or higher), CUDA Tookkit, and cuDNN SDK. For the CUDA Tookkit, we can download them from nvidia webpage (<a href="https://developer.nvidia.com/cuda-downloads?target_os=Windows&target_arch=x86_64&target_version=10&target_type=exe_network" target="_blank">CUDA Toolkit 11.5</a>) or in my archive (Download: <a href="../program/cuda_11.5.0_win10_network.exe">CUDA Toolkit</a>). For the cuDNN, we go to nvidia webpage (<a href="https://developer.nvidia.com/cudnn-download-survey" target="_blank">cuDNN</a>). Note that we need to register for the NVIDIA Developer Program, which is free. After than we can download the <code>cuDNN Library for Windows (x64)</code>. It is a zip file and we only see three folders <code>bin</code>, <code>include</code>, and <code>lib</code>. One <code>.txt</code> file is also included. To install the cuDNN, what we need to do is to copy these folders to the CUDA directory. In my case, it is <code>C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.5</code>. See the <a href="#nvidiainstallguide">NVIDIA installation guide</a> for more details. Now, let's run the code again. The error should be gone. Great job! So it is time to run the first TensorFlow program!
+	
+			<a href="#top"><BR><BR>To top</a>
+			
+			<a class="anchor" id="firstprogram"></a>
+			<h1>First Program</h1>
+			The following are based on the <a href="https://www.tensorflow.org/tutorials/quickstart/beginner">tutorial</a> in the TensorFlow offical webpage. First, we open a new python code file named as <code>lesson1.py</code>.
+			<a href="#top"><BR><BR>To top</a>
+			
+			
+			<a class="anchor" id="reference"></a>
+			<h1>Reference</h1>
+			<a class="anchor" id="python"></a> Python, <a href="https://www.python.org/" target="_blank"> https://www.python.org/ </a> <br>
+			<a class="anchor" id="pytorch"></a> Pytorch, <a href="https://pytorch.org/" target="_blank"> https://pytorch.org/ </a> <br>
+			<a class="anchor" id="microsoft"></a> Microsoft, <a href="https://www.microsoft.com/" target="_blank">https://www.microsoft.com/</a><br>
+			<a class="anchor" id="tensorflow"></a> TensorFlow, <a href="https://www.tensorflow/" target="_blank">https://www.tensorflow.com/</a><br>
+			<a class="anchor" id="nvidia"></a> Nvidia, <a href="https://www.nvidia.com/en-us/" target="_blank">https://www.nvidia.com/en-us/</a><br>
+			<a class="anchor" id="nvidiainstallguide"></a> Nvidia Installion Guide, <a href="https://docs.nvidia.com/deeplearning/cudnn/install-guide/index.html" target="_blank">https://docs.nvidia.com/deeplearning/cudnn/install-guide/index.html</a><br>
+			
+			<a href="#top"><BR><BR>To top</a> <br><br><br>
+				
+		</div>
+		
+	</body>
+</html>	

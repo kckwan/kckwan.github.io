@@ -1,0 +1,605 @@
+@import url("colorscheme.css");
+
+.home_main {
+    background-image: url("../img/photo/background.jpg");
+}
+
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body, html, .tabs {
+    margin: 0;
+}
+
+footer {
+	padding:30px;
+	background-color: var(--main-color1); 
+	text-align: center;
+	color: var(--main-color0);
+}
+
+h1 {
+   width: 80%; 
+   text-align: center;
+   color:var(--main-color1); 
+   border-bottom: 3px solid var(--main-color1); 
+   line-height: 0;
+   padding: 0 0 0 0pt;    
+   margin-top: 100pt;
+   margin-left: auto;
+   margin-right: auto;
+} 
+
+h1 span { 
+    background: var(--main-color0); 
+    padding:0 10px; 
+}
+
+div.flex-container {
+    display: flex;
+	max-width: 1500px;
+	margin-bottom:20pt;
+	justify-content: flex-end;
+}
+
+.flex-childTextA {
+	flex:0 0;
+	font-size:min(20pt,2vw);
+    background-color: var(--main-color1);
+	color: var(--main-color0);
+	margin-right: 15px;
+	margin-bottom: 5px;
+	margin-top: 0px;
+	padding: 20px;
+	padding-top: 10px;
+}  
+
+.flex-childTextB {
+	flex:0 1;
+	right: 0;
+	font-size:min(20pt,2vw);
+    background-color: var(--main-color1);
+	color: var(--main-color0);
+	margin-left: 15px;
+	margin-bottom: 5px;
+	margin-top: 0px;
+	padding: 20px;
+	padding-top: 10px;
+}  
+
+
+
+snap.papername{
+    font-size: min(22pt,3vw);
+    font-weight: bold;
+    text-align: left;
+
+}
+snap.paperconf{
+
+}
+snap.author{
+    font-size: min(16pt,2.5vw);
+    font-style: italic;
+    font-weight: it;
+    padding: 0pt 5pt;
+}
+snap.authorme{
+    font-weight: bold;
+}
+
+div.paperabs{
+    font-size: min(13pt,2vw);
+    text-align: justify;
+    margin-top: 15pt;
+    margin-bottom: 10pt;
+}
+
+snap.paperabsicon{
+    font-size:min(12pt,2vw);
+    border-radius: 10px;
+    background-color: var(--main-color2);
+    color: var(--main-color0);
+    padding:0pt 5pt;
+    margin-right: 5pt;
+}
+
+.gallay{
+    text-align: center;
+}
+a {
+  color: var(--main-color1);
+}
+
+a.anchor {
+    display: block;
+    position: relative;
+    top: -100px;
+    visibility: hidden;
+}
+
+a.better{
+    text-decoration: none;                              
+    border-radius: 20px;
+    font-weight: bold;
+    background-color: var(--main-color1);
+    color: white;
+    padding: 2pt 10pt;
+	line-height:1.5;
+	word-wrap: normal;
+	white-space: nowrap;
+}
+
+a.disabled{
+	pointer-events: none;
+    text-decoration: none;                              
+    border-radius: 20px;
+    background-color: var(--main-color2);
+    color: white;
+    padding: 2pt 10pt;
+	white-space: nowrap;
+}
+
+
+.section{
+    font-family: Arial;
+    font-size: min(15pt,3vw);
+    width:80%;
+    margin-left:auto;
+    margin-right:auto;
+	margin-top:50pt;
+	margin-bottom:50pt;
+	clear: both;
+}
+
+span.newdate2{
+	float: left;
+	width: 100px;
+    border-radius: 10px;
+    background-color: var(--main-color2);
+    color: var(--main-color0);
+    padding:0pt 5pt;
+}
+
+span.newdatenew{
+	float: left;
+	width: 100px;
+    border-radius: 10px;
+    background-color: red;
+    color: var(--main-color0);
+    padding:0pt 5pt;
+}
+
+span.newdate3{
+	float: left;
+	min-width: 150px;
+    border-radius: 10px;
+    background-color: var(--main-color2);
+    color: var(--main-color0);
+    padding:0pt 5pt;
+}
+
+span.newdate{
+    border-radius: 10px;
+    background-color: var(--main-color2);
+    color: var(--main-color0);
+    padding:0pt 5pt;
+}
+
+
+table.teachingtable{
+}
+
+table.teachingtable td.c1{
+	padding-right:30pt;
+	vertical-align:middle;
+}
+
+table.teachingtable td.c2{
+    padding-right:30pt;
+}
+table.teachingtable td.c3{
+}
+
+
+table.news{
+    line-height: 1.5;
+}
+
+table.news td.c1{
+    padding-right: 5pt;
+    vertical-align: top;
+}
+
+table.edutable{
+}
+
+table.edutable td.c2{
+    padding: 0pt 0pt 7pt;
+}
+
+
+table.edutable tr{
+    margin-top: 40pt;
+    padding: 10pt;
+    margin-left: 10pt;
+	line-height: 1.4;
+}
+
+table.edutable td.c1{
+	
+    width:120pt;
+    padding: 2pt 0pt;
+    vertical-align: top;
+}
+
+table.papertable{
+}
+
+
+table.papertable td.c1{
+    width:250pt;
+    vertical-align: top;
+}
+table.papertable td.c2{
+    vertical-align: top;
+    padding-bottom: 50pt;
+}
+
+table.myinfotable td.c1{
+	font-family: Arial;
+    font-size: min(15pt,3vw);
+	font-weight: bold;
+	padding-top: 4pt;
+	padding-bottom: 10pt;
+	white-space: nowrap;
+
+}
+table.myinfotable{
+	
+}
+
+img.paperrep{
+    width:90%;
+    vertical-align: top;
+    margin-top: 10pt;
+}
+
+.gallay img{
+    height:20vw;
+    min-height:300pt;
+}
+
+img.icon{
+    height:min(25pt,4vw);
+    margin-left: 0pt;
+    padding: 0pt;
+    vertical-align: middle;
+
+}
+
+.home_main{
+    width: 100%;
+    height: 100%;
+	padding: 0 0 0 0pt;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	overflow: auto;
+}
+
+.intro_box{
+	background-color: var(--main-colorA);
+	border: 3px solid #f1f1f1;
+	color: white;
+	width: 90%;
+	top: 10%;
+    left: 5%;
+    position: relative;
+	min-height: 300pt;
+	margin-top: 100pt;
+	margin-bottom: 100pt;
+	padding: 30px;
+	overflow: auto;
+}
+
+div.home_intro p { 
+	display: block;
+	vertical-align: top;
+	text-align:justify; 
+	padding:10pt;
+	font-size: min(15pt,2vw);
+} 
+	
+div.mobile{display: none}
+div.pc{display:initial;}
+div.left{
+    float:left;
+	display:block;
+	margin:0 10 0 10px;
+	height: 100%;
+    max-width:65%;
+    min-width:100pt;
+	position: relative
+}
+
+div.right {
+	float:right;
+	margin:0 0 0 0px;
+	width: 30%;
+	max-width:300pt;
+    min-width:100pt;
+	position: relative
+}
+
+div.right img { 
+    border-radius: 20px; 
+    width: 100%;   
+	height: 100%;
+}
+p.myname { 
+    display: block;
+    font-weight: bold; 
+    font-size: min(25pt,4vw);
+    margin-top: 10pt;
+    margin-bottom: 5pt;
+}
+p.mydegree { 
+ display: block;
+ font-weight: normal;
+ margin: 0 0 0 20px;
+ font-size: min(17pt,2vw);
+}
+p.myinterest { 
+	display: block;
+	font-style: italic; 
+	margin: 0 0 0 20px;
+	font-size: min(15pt,2vw);
+}
+
+div.filledbox{
+	width:min(20pt,3vw);
+	height:min(20pt,3vw);
+	background-color: var(--main-color1);
+	border-radius:min(5pt,1vw);
+	vertical-align: middle;
+	float:left;
+}
+
+div.emptybox{
+	width:min(10pt,2vw);
+	height:min(10pt,2vw);
+	border:1px solid #000000;
+	margin-top:5px;
+	margin-left:min(5pt,0.5vw);
+	vertical-align: text-top;
+	float:left;
+}
+
+div.linkbox{
+	width:min(100%,1000px);
+	background-color: var(--main-color1);
+	padding:30px;
+	margin:10px;
+	margin-left:min(30px,1%);
+	color: var(--main-color0);
+}
+
+div.selectedpaperlist{
+	width: 90%;
+	padding: 10px;
+	margin-bottom: 100pt;
+	display: table;
+}
+
+div.selectedpaper{
+	width: 250pt;
+	padding-bottom: 10pt;
+	vertical-align: top;
+	display: inline-block;
+	margin:20pt;
+}
+
+div.selectedpaper img{
+	width: 100%;
+}
+
+.header{
+    position: -webkit-sticky;
+    position: sticky;
+	top :0;
+	clear: both;	
+	
+}
+ul.menubar {
+    list-style-type: none;
+    font-family: Arial;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: var(--main-color1);
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+
+ul.menubar li { float: left; }
+ul.menubar li a:hover { background-color:var(--main-colorhighlight); }
+ul.menubar li p{ 
+    color: white;
+    font-weight: bold;
+    font-size : min(15pt,3vw);
+    text-align: left;
+    margin-top: 10pt;
+    margin-bottom: 10pt;
+    padding: 0px 20px;
+}
+
+ul.menubar li a { 
+    text-decoration: none;
+    font-weight: bold;
+    font-size : min(15pt,3vw);
+    display: block;
+    color: white;
+    text-align: center;
+    height: 100%;
+    margin-top: 0pt;
+    margin-bottom: 0pt;
+    padding: 8px 16px 8px;
+}
+
+@media screen and (max-width: 700px) {
+    body {
+        background-color: white;
+    }
+    .bg-text {
+        top: 1%;
+    }
+    h2 {
+        text-align: center;
+    }
+    div.home_intro p { display: none; }
+    div.mobile{display:initial;}
+    div.pc{display:none;}
+
+	.intro_box{
+		margin-top: 50pt;
+		margin-bottom: 110pt;
+		padding: 30px;
+	}
+
+    div.left{float:none;margin:auto;max-width:100%}
+    div.right{float:none;margin:auto;width:70%;max-width:100%;margin-top:40pt;}
+
+    p.myname { text-align: center;font-size: 5vw;}
+    p.mydegree { text-align: center;font-size: 3vw;}
+
+    .right img{ 
+        float:none;
+        display: block;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        overflow: none;
+    }
+    ul.menubar {
+        margin:0;
+        padding: 0px 3px;
+        overflow: auto;
+    }
+    ul.menubar li{
+        display: table-cell;
+        text-align: center;
+        width: 33%;
+        margin: 1px 0 1px 0;
+    }
+    ul.menubar li a{
+        display: block;
+        
+    }
+
+    .section{
+        width:98%;
+		
+    }
+
+    .section p{
+        text-align: center;
+        margin-left:5%;
+    }
+
+    img.icon{
+        height:40pt;
+    }
+
+    table.news td.c1{
+		width: 20%;
+        text-align: center;
+        background-color: var(--main-color2);
+    }
+	
+	table.news td.c2{
+        text-align:justify;
+		padding-bottom:10pt;
+    }
+	
+    table.teachingtable td.c1{
+		width: 25%;
+		padding:0;
+        text-align: center;
+        background-color: var(--main-color2);
+    }
+	
+	
+	table.teachingtable td.c2{
+		display: none;
+		text-align:justify;
+		padding-bottom:10pt;
+	}
+
+    
+
+    span.newdate{
+        border-radius: 0px;
+        background-color: var(--main-color2);
+        color: var(--main-color0);
+        padding:0pt 5pt;
+    }
+
+    table.edutable td.c1{
+		width: 20%;
+        text-align: center;
+        background-color: var(--main-color2);
+		
+    }
+    table.edutable td.c2{
+		padding-left:10pt;
+        text-align:justify;
+		line-height:1.5;
+    }
+    table.papertable td.c1{
+        width:40%;
+        vertical-align: top;
+    }
+    table.papertable td.c1{
+        vertical-align: top;
+    }
+    
+	
+	
+    img.paperrep{
+        width:100%;
+        vertical-align: top;
+    }
+    snap.author{
+        margin-bottom: 10pt;
+    }
+    
+    div.paperabs{
+        display:none;
+    }
+    div.paperlink{
+        margin-top: 10pt;
+        word-wrap: normal;
+        
+        line-height: 2.0;
+    }
+    .gallay img{
+        width:100%;
+        height:auto;
+        min-height:inherit;
+        margin-bottom: 30pt;
+    }
+	
+	div.selectedpaperlist *{
+		width: 90%;
+	}
+	
+}
+	
+}

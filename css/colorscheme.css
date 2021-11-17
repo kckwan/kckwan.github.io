@@ -1,0 +1,11 @@
+* {
+    --main-color0: white;    
+    --main-color1: #1080CF;
+    --main-colord: #00409F;
+    --main-color2: #9999AA;
+    --main-colorA: #11539FF0;
+    --main-colorhighlight: #80E0EF;  
+    --main-coloractive: #95C8DA;  
+	
+	box-sizing: border-box;
+}
