@@ -4,7 +4,7 @@
     <head>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">   
 		<title>Deep Learning on Digital Image</title>
-        <link rel="stylesheet" type="text/css" href="../css/style_res.css">
+        <link rel="stylesheet" type="text/css" href="../css/style_tutorial.css">
 		<link rel="shortcut icon" type="image/x-icon" href="#">
     </head>
     
@@ -62,12 +62,12 @@
 			
 			<a class="anchor" id="installation"></a>
 			<h1>Installation </h1>
-			<p>To install the python in windows, just need to download from the python webpage (<a href="https://www.python.org/downloads/release/python-399/" target="_blank">Python 3.9.9</a>). Run the <code>.exe</code> file to install python in the computer. It is also recommended to add python to <code>PATH</code> by enabling it on the installation page:</p>
+			<p>To install the python in windows, just need to download from the python webpage (<a href="https://www.python.org/downloads/release/python-399/" target="_blank">Python 3.9.9</a>) or in my archive (Download: <a href="../program/python-3.9.9-amd64.exe" target="_blank">Python Windows installer (64-bit)</a>). Run the <code>.exe</code> file to install python in the computer. It is also recommended to add python to <code>PATH</code> by enabling it on the installation page:</p>
 			<figure>
 			<img src="../img/tutorial/deepimage/install_python.png" />
 			<figCaption>Installing python. Add python to path.</figCaption>
 			</figure>
-			<p>Then we also need to install TensorFlow in windows. According to the offical webpage of TensorFlow, we need to install C++ redistributable for Windows 7 or later, if we have not done that before. Just need to download it from the Microsoft webpage (<a href="https://docs.microsoft.com/en-US/cpp/windows/latest-supported-vc-redist?view=msvc-170" target="_blank">Microsoft Visual C++ Redistributable Latest Supported Downloads</a>). Run the <code>.exe</code> file to install it in the computer. Remember that we need to restart the computer after installing the C++ redistributable.</p>
+			<p>Then we also need to install TensorFlow in windows. According to the offical webpage of TensorFlow, we need to install C++ redistributable for Windows 7 or later, if we have not done that before. Just need to download it from the Microsoft webpage (<a href="https://docs.microsoft.com/en-US/cpp/windows/latest-supported-vc-redist?view=msvc-170" target="_blank">Microsoft Visual C++ Redistributable Latest Supported Downloads</a>) or in my archive (Download: <a href="../program/VC_redist_x64.exe" target="_blank">C++ Redistributable installer (64-bit)</a>). Run the <code>.exe</code> file to install it in the computer. Remember that we need to restart the computer after installing the C++ redistributable.</p>
 			<p>After installing the C++ redustribution, the last thing is to install TensorFlow. Unlike the other tools above, the TensorFlow library require <code>pip</code> of python. To do so, let's start a commend prompt from Windows. One can do so by finding command prompt in the start menu, searching the keyword <code>cmd</code>.
 			</p>
 			
@@ -81,13 +81,13 @@
 			<figCaption>It is Command Prompt.</figCaption>
 			</figure>
 			
-			In the command prompt, let's check whether the python is installed correctly. We type <code>python -V</code> and <code>pip -V</code>, and we should get the output <code>Python 3.9.9</code> and <code>pip 21.2.4 from \(the path)\pip (python 3.9)</code> if python is installed. Next, let's install the tensorflow using <code>pip</code>. We can type <code>pip install tensorflow</code>, and we will the program is downloading the tools, including its required package. Once it is finished, we can verify the installation by <code>python -c "import tensorflow as tf;print(tf.reduce_sum(tf.random.normal([1000, 1000])))"</code>. This is from the <a href="https://www.tensorflow.org/install">installation guide</a> of TensorFlow. A tensor <code>tf.Tensor(xxxx.xxxx, shape=(), dtpye=float32)</code> is returned. Then, TensorFlow has been installed. However, some people may see an error: <code>dlerror: cusolver64_11.dll not found</code>. It is because the GPU driver tools are not setuped. In Tensorflow, CUDA is needed for NVIDIA GPU-support. So I need download the GPU drivers (450.80.02 or higher), CUDA Tookkit, and cuDNN SDK. For the CUDA Tookkit, we can download them from nvidia webpage (<a href="https://developer.nvidia.com/cuda-downloads?target_os=Windows&target_arch=x86_64&target_version=10&target_type=exe_network" target="_blank">CUDA Toolkit 11.5</a>). For the cuDNN, we go to nvidia webpage (<a href="https://developer.nvidia.com/cudnn-download-survey" target="_blank">cuDNN</a>). Note that we need to register for the NVIDIA Developer Program, which is free. After than we can download the <code>cuDNN Library for Windows (x64)</code>. It is a zip file and we only see three folders <code>bin</code>, <code>include</code>, and <code>lib</code>. One <code>.txt</code> file is also included. To install the cuDNN, what we need to do is to copy these folders to the CUDA directory. In my case, it is <code>C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.5</code>. See the <a href="#nvidiainstallguide">NVIDIA installation guide</a> for more details. Now, let's run the code again. The error should be gone. Great job! So it is time to run the first TensorFlow program!
+			In the command prompt, let's check whether the python is installed correctly. We type <code>python -V</code> and <code>pip -V</code>, and we should get the output <code>Python 3.9.9</code> and <code>pip 21.2.4 from \(the path)\pip (python 3.9)</code> if python is installed. Next, let's install the tensorflow using <code>pip</code>. We can type <code>pip install tensorflow</code>, and we will the program is downloading the tools, including its required package. Once it is finished, we can verify the installation by <code>python -c "import tensorflow as tf;print(tf.reduce_sum(tf.random.normal([1000, 1000])))"</code>. This is from the <a href="https://www.tensorflow.org/install">installation guide</a> of TensorFlow. A tensor <code>tf.Tensor(xxxx.xxxx, shape=(), dtpye=float32)</code> is returned. Then, TensorFlow has been installed. However, some people may see an error: <code>dlerror: cusolver64_11.dll not found</code>. It is because the GPU driver tools are not setuped. In Tensorflow, CUDA is needed for NVIDIA GPU-support. So I need download the GPU drivers (450.80.02 or higher), CUDA Tookkit, and cuDNN SDK. For the CUDA Tookkit, we can download them from nvidia webpage (<a href="https://developer.nvidia.com/cuda-downloads?target_os=Windows&target_arch=x86_64&target_version=10&target_type=exe_network" target="_blank">CUDA Toolkit 11.5</a>) or in my archive (Download: <a href="../program/cuda_11.5.0_win10_network.exe">CUDA Toolkit</a>). For the cuDNN, we go to nvidia webpage (<a href="https://developer.nvidia.com/cudnn-download-survey" target="_blank">cuDNN</a>). Note that we need to register for the NVIDIA Developer Program, which is free. After than we can download the <code>cuDNN Library for Windows (x64)</code>. It is a zip file and we only see three folders <code>bin</code>, <code>include</code>, and <code>lib</code>. One <code>.txt</code> file is also included. To install the cuDNN, what we need to do is to copy these folders to the CUDA directory. In my case, it is <code>C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.5</code>. See the <a href="#nvidiainstallguide">NVIDIA installation guide</a> for more details. Now, let's run the code again. The error should be gone. Great job! So it is time to run the first TensorFlow program!
 	
 			<a href="#top"><BR><BR>To top</a>
 			
 			<a class="anchor" id="firstprogram"></a>
 			<h1>First Program</h1>
-			<p>The following are based on the <a href="https://www.tensorflow.org/tutorials/quickstart/beginner">tutorial</a> in the TensorFlow offical webpage. First, we open a new python code file named as <code>lesson1.py</code>. And then we include the following code in to the files: </p>
+			<p>The following are based on the <a href="https://www.tensorflow.org/tutorials/quickstart/beginner">tutorial</a> in the TensorFlow offical webpage. First, we open a new python code file named as <code>lesson1.py</code>. And then we include the following code (modified from the TensorFlow tutorial) in to the files: </p>
 			<div>
 				<pre><code>
 import tensorflow as tf
@@ -119,11 +119,9 @@ probability_model = tf.keras.Sequential([
 print(probability_model(data_np))
 				</code></pre>
 			</div>
-			<p>
-			I modified the code from the TensorFlow tutorial by keeping necessary mininal code. </p>
 			<p><b>[Constructing]</b></P>
-			
-			<!--Code sample from https://www.tensorflow.org/tutorials/quickstart/beginner. The original code are under Apache License, Version 2.0. Here, I converted the code from ipynb to py files. Added my own learning comments, and removed unnecessary line of code for better understanding.
+			<p> 
+			Code sample from https://www.tensorflow.org/tutorials/quickstart/beginner. The original code are under Apache License, Version 2.0. Here, I converted the code from ipynb to py files. Added my own learning comments, and removed unnecessary line of code for better understanding.
 #import the tensorflow library 
 #Download data from Keras
 #Get data, one train set and one testing set. x is the image data, while y is the label
@@ -163,7 +161,7 @@ probability_model = tf.keras.Sequential([
 
 import numpy as np
 data_np = np.asarray(pen, np.float32)
-print(probability_model(data_np) * 100)!-->
+print(probability_model(data_np) * 100)
 
 			</p>
 			[Constructing]

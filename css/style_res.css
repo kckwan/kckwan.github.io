@@ -100,6 +100,18 @@ a.learningtopic{
 	margin:20pt;
 	text-decoration: none;
 }
+a.learningtopicdisabled{
+	padding-bottom: 10pt;
+	vertical-align: middle;
+	display: inline-block;
+	width:min(100%,400pt);
+	height:150pt;
+	border:1px solid #000000;
+	background-color: #555555;
+	margin:20pt;
+	text-decoration: none;
+	pointer-events: none;
+}
 div.learningtopictitle{
 	padding-top:15pt;
 	padding-left:10pt;
@@ -118,11 +130,11 @@ div.learningtopicimg{
 	margin-left:5pt;
 	float:left;
 	height: 100%;
-	border:1px solid #000000;
 }
-div.learningtopic img{
-	height:100%;
-	
+div.learningtopicimg img{
+	margin-top:5%;
+	margin-left:5%;
+	height:90%;
 }
 
 
